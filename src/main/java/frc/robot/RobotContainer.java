@@ -1,10 +1,10 @@
 package frc.robot;
 
-import frc.robot.subsystems.*;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.commands.TeleopCommand;
 import frc.robot.subsystems.DriveSubsystem;
+import frc.robot.subsystems.ManipulatorSubsystem;
 
 public class RobotContainer {
 
@@ -12,8 +12,9 @@ public class RobotContainer {
   private static RobotContainer m_robotContainer = new RobotContainer();
 
   private static DriveSubsystem m_DriveSubsystem = new DriveSubsystem();
+  private static ManipulatorSubsystem m_ManipulatorSubsystem = new ManipulatorSubsystem();
   
-  private TeleopCommand m_teleopCommand = new TeleopCommand(m_DriveSubsystem);
+  private TeleopCommand m_teleopCommand = new TeleopCommand(m_DriveSubsystem, m_ManipulatorSubsystem );
 
   // Controllers
   private final CommandXboxController driveController = new CommandXboxController(0);

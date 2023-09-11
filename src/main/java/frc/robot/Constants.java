@@ -27,7 +27,10 @@ public class Constants {
         public static final int leftDriveMotorPort = 0;
         public static final int rightDriveMotorPort = 1;
 
-        public static double someSpeed = 1;
+        public static final int shouldarMotorPort = 2;
+        public static final int manipulatorMotorPort = 3;
+
+        public static double shouldarSpeed = 1;
 
         public static final boolean leftMotorInverse = true;
         public static final boolean rightMotorInverse = false;

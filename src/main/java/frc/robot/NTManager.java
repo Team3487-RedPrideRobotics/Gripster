@@ -6,8 +6,8 @@ import edu.wpi.first.networktables.NetworkTableInstance;
 
 public class NTManager{
 
-    public static DoublePublisher someSpeedPub;
-    public static DoubleSubscriber someSpeedSub;
+    public static DoublePublisher shouldarSpeedPub;
+    public static DoubleSubscriber shouldarSpeedSub;
 
 
 
@@ -15,11 +15,11 @@ public static void initialize() {
     var networkTable = NetworkTableInstance.getDefault();
     var gripsterTable = networkTable.getTable("Gripster Table");
     
-    //drive speed
+    //Shouldar Speed
     var driveSpeedTopic = gripsterTable.getDoubleTopic("Some Speed");
-    someSpeedPub = driveSpeedTopic.publish();
-    someSpeedPub.setDefault(Constants.someSpeed);
-    someSpeedSub = driveSpeedTopic.subscribe(Constants.someSpeed);
+    shouldarSpeedPub = driveSpeedTopic.publish();
+    shouldarSpeedPub.setDefault(Constants.shouldarSpeed);
+    shouldarSpeedSub = driveSpeedTopic.subscribe(Constants.shouldarSpeed);
 
 }
 }
